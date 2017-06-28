@@ -1,0 +1,35 @@
+.btn-color(@bg, @text){
+  background: @bg;
+  color: @text;
+  border-color: @bg;
+  &.active,
+  &:focus,
+  &:hover {
+    background: @text;
+    color: @bg;
+  }
+}
+
+.btn {
+  .font;
+  display: inline-block;
+  margin: 0 auto;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 20px;
+  border: 2px solid;
+  .transition;
+  &--sm {
+    font-size: 12px;
+    padding: 6px 14px 3px;
+  }
+
+  &-blue {
+    .btn-color(@blue, @grey);
+  }
+  &-grey {
+    .btn-color(@grey, @blue);
+  }
+}

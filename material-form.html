@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie lt-ie9 lt-ie8 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>home</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="public/css/reset.css">	
+	<link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="public/css/material-form.css"> 
+</head>
+<body>
+	<!--[if lt IE 9]>
+		<script>
+			document.createElement('header');
+			document.createElement('nav');
+			document.createElement('section');
+			document.createElement('article');
+			document.createElement('aside');
+			document.createElement('footer');
+			document.createElement('figure');
+		</script>
+	<![endif]-->
+	
+	<div class="wrapper">
+		<div class="inner">
+			<form class="materialForm" action="">
+        <h1>Demo material design form</h1>
+        <div class="form-group">
+          <select>
+            <option>Value 1</option>
+            <option>Value 2</option>
+          </select>
+          <label class="control-label" for="select">Selectbox</label><i class="bar"></i>
+        </div>
+        <div class="form-group">
+          <input type="text" required="required"/>
+          <label class="control-label" for="input">Textfield</label><i class="bar"></i>
+        </div>
+        <div class="form-group">
+          <textarea required="required"></textarea>
+          <label class="control-label" for="textarea">Textarea</label><i class="bar"></i>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" checked="checked"/><i class="helper"></i>I'm the label from a checkbox
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
+          </label>
+        </div>
+        <div class="form-radio">
+          <div class="radio">
+            <label>
+              <input type="radio" name="radio" checked="checked"/><i class="helper"></i>I'm the label from a radio button
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="radio"/><i class="helper"></i>I'm the label from a radio button
+            </label>
+          </div>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"/><i class="helper"></i>I'm the label from a checkbox
+          </label>
+        </div>
+        <div class="buttonContainer">
+          <button class="button" type="button"><span>Submit</span></button>
+        </div>
+      </form>
+		</div><!--/.inner-->
+	</div><!--/.wrapper-->	
+	<script src="public/js/libs/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="public/js/script.js"></script>
+	<script type="text/javascript" src="public/js/material-form.js"></script>
+	<script>
+		/*target ie10*/
+		if (Function('/*@cc_on return document.documentMode===10@*/')()){
+		    document.documentElement.className+=' lt-ie10 ie10 ';
+		}
+		/*target ie11*/
+		    var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf('MSIE ');
+		    var trident = ua.indexOf('Trident/');
+		    if (trident > 0) {
+			    // IE 11 (or newer) => return version number
+			    var rv = ua.indexOf('rv:');
+			   document.documentElement.className+= " lt-ie11 ie"+ua.substring(rv + 3, ua.indexOf('.', rv));
+		    }
+	</script>
+</body>
+</html>

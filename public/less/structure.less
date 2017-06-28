@@ -1,0 +1,43 @@
+body {
+  .font;
+  text-size-adjust: 100%;
+  background-color: @background-color;
+  color: @text-color;
+}
+
+.wrapper {}
+
+.inner,
+.inner-sm {
+  margin: 0 auto;
+  position: relative;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.inner {
+  width: @inner-width;
+}
+.inner-sm {
+  width: @inner-sm-width;
+}
+
+@media (max-width: (@inner-width + @inner-padding*2)) {
+  .inner {
+    width: 100%;
+    padding-left: @inner-padding;
+    padding-right: @inner-padding;
+  }
+}
+@media (max-width: (@inner-sm-width + @inner-sm-padding*2)) {
+  .inner {
+    width: 100%;
+    padding-left: @inner-sm-padding;
+    padding-right: @inner-sm-padding;
+  }
+}

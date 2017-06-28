@@ -1,0 +1,21 @@
+.load-font(@font-name, @font-file, @font-weight: 400, @font-style: normal){
+  @svg-id: replace("@{font-file}", "-", "", "g");
+
+  font-family: '@{font-name}';
+  src: url('../fonts/@{font-file}.eot');
+  src: url('../fonts/@{font-file}.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/@{font-file}.woff2') format('woff2'),
+  url('../fonts/@{font-file}.woff') format('woff'),
+  url('../fonts/@{font-file}.ttf') format('truetype'),
+  url('../fonts/@{font-file}.svg#@{svg-id}') format('svg');
+  font-weight: @font-weight;
+  font-style: @font-style;
+}
+
+@font-face {
+    .load-font('roboto', 'roboto-regular');
+}
+
+@font-face {
+    .load-font('roboto', 'roboto-bold', 700);
+}

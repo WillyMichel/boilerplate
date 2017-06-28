@@ -1,0 +1,47 @@
+/***** colors *****/
+@background-color: #e8e8e8;
+@text-color: #252629;
+@error-color: #ff0000;
+@success-color: #a7c855;
+@grey: #3c3d42;
+@grey-light: #cfcfcf;
+@blue: #139cd8;
+
+/***** structure *****/
+@inner-width: 1024px;
+@inner-padding: 15px;
+@inner-sm-width: 720px;
+@inner-sm-padding: 15px;
+
+/***** breakpoints *****/
+@xs-max: 420px;
+@sm-max: 560px;
+@md-max: 768px;
+@lg-max: 1024px;
+@xl-max: 1220px;
+
+@xs-min: (@xs-max+1px);
+@sm-min: (@sm-max+1px);
+@md-min: (@md-max+1px);
+@lg-min: (@lg-max+1px);
+@xl-min: (@xl-max+1px);
+
+/***** mixins *****/
+.font {
+  font-family: "font_name", sans-serif;
+}
+
+.icomoon-styles {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
